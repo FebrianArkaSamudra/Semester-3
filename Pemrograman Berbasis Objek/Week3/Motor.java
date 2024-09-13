@@ -11,10 +11,14 @@ public class Motor {
         speed=0;
     }
     public void increaseEngine () {
-        if (motorOn==true) {
-            speed+=5;
-        }
-        else {
+        if (motorOn) {
+            if (speed + 5 > 100) {
+                speed = 100; 
+                System.out.println("Maximum speed reached!");
+            } else {
+                speed += 5;
+            }
+        } else {
             System.out.println("Motor Cycle Off");
         }
     }
