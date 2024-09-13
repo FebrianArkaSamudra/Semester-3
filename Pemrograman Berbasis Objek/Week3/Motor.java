@@ -20,7 +20,7 @@ public class Motor {
     }
     public void reduceEngine () {
         if (motorOn==true) {
-            speed+=5;
+            speed-=5;
         }
         else {
             System.out.println("Motor Cycle Off");
