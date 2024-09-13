@@ -3,6 +3,12 @@ public class Member {
     private String address;
     private float deposit;
 
+    Member (String name, String address) {
+        this.name = name;
+        this.address = address;
+        this.deposit = 0;
+    }
+
     public void setName(String name) {
         this.name=name;
     }
