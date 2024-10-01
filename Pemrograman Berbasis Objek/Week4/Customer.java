@@ -3,7 +3,6 @@ public class Customer {
     private Car car;
     private Driver driver;
     private int day;
-
     public Customer() {}
 
     public void setName(String name) {
