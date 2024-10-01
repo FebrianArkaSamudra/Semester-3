@@ -1,25 +1,47 @@
+import java.util.Scanner;
+
 public class TestKoperasi {
     public static void main(String[] args) {
-       
+ 
+        Scanner scanner = new Scanner(System.in);
+
         MemberTask donny = new MemberTask("111333444", "Donny", 5000000);
 
         System.out.println("Member name: " + donny.getName());
         System.out.println("Loan Limit: " + donny.getLoanLimit());
 
-        System.out.println("\nBorrow money 4.000.000...");
-        donny.borrow(4000000);
+        System.out.print("\nEnter amount to borrow: ");
+        int borrowAmount = scanner.nextInt();
+        donny.borrow(borrowAmount);
         System.out.println("Current loan amount: " + donny.getLoanAmount());
 
-        System.out.println("\nPay installments 300.000 (less than 10%)");
-        donny.installments(300000);
+        System.out.print("\nEnter installment amount to pay: ");
+        int installmentAmount = scanner.nextInt();
+        donny.installments(installmentAmount);
         System.out.println("Current loan amount: " + donny.getLoanAmount());
 
-        System.out.println("\nPay installments 400.000 (10% or more)");
-        donny.installments(400000);
-        System.out.println("Current loan amount: " + donny.getLoanAmount());
+        while (true) {
+            System.out.println("\nDo you want to (1) Borrow or (2) Pay Installment or (3) Exit?");
+            int choice = scanner.nextInt();
+            
+            if (choice == 1) {
+                System.out.print("Enter amount to borrow: ");
+                borrowAmount = scanner.nextInt();
+                donny.borrow(borrowAmount);
+                System.out.println("Current loan amount: " + donny.getLoanAmount());
+            } else if (choice == 2) {
+                System.out.print("Enter installment amount to pay: ");
+                installmentAmount = scanner.nextInt();
+                donny.installments(installmentAmount);
+                System.out.println("Current loan amount: " + donny.getLoanAmount());
+            } else if (choice == 3) {
+                System.out.println("Exiting...");
+                break;
+            } else {
+                System.out.println("Invalid option. Please select 1, 2, or 3.");
+            }
+        }
 
-        System.out.println("\nPay installments 5.000.000 (exceeds loan amount)");
-        donny.installments(5000000);
-        System.out.println("Current loan amount: " + donny.getLoanAmount());
+        scanner.close();
     }
 }
