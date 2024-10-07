@@ -1,5 +1,5 @@
 public class ClassB extends ClassA{
-    public int z;
+    private int z;
 
 public void setZ(int z){
     this.z = z;
@@ -10,6 +10,6 @@ public void setZ(int z){
     }
 
     public void getJumlah(){
-        System.out.println("Jumlah: " + (x + y + z));
+        System.out.println("Jumlah: " + (getX() + getY() + z));
     }
 }
