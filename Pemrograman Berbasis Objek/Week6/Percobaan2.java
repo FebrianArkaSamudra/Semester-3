@@ -10,5 +10,6 @@ public class Percobaan2 {
         hitung.getNilaiZ();
         hitung.getJumlah();
 
+
     }
 }
