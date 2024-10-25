@@ -54,11 +54,11 @@ public class Restaurant {
         System.out.println("\n\n=======WELCOME TO ARKA RESTAURANT=======\n");
         System.out.println("Menu of Restaurant " + name + ":");
         System.out.println("Foods:");
-        System.out.println("1. Food A - 20,000 IDR");
-        System.out.println("2. Food B - 15,000 IDR");
+        System.out.println("1. Fried Rice Egg- 15,000 IDR");
+        System.out.println("2. Fried Rice Chicken - 17,000 IDR");
         System.out.println("Beverages:");
-        System.out.println("1. Beverage A - 5,000 IDR");
-        System.out.println("2. Beverage B - 10,000 IDR\n\n");
+        System.out.println("1. Iced Tea - 5,000 IDR");
+        System.out.println("2. Orange Juice - 7,000 IDR\n\n");
     }
 
     public Inventory getInventory() {
